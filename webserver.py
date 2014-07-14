@@ -16,13 +16,16 @@ def index():
 def process():
     if 'whoa' not in request.args:
         return "lol"
-    if not request.args['whoa'] == SECRET:
+
+    if request.args['whoa'] != SECRET:
         return "lol"
+
     if 'text' not in request.args or 'size' not in request.args:
         return "Missing text or font size"
 
     makeimage(request.args['text'], request.args['size'])
     os.system("screen -S tehpix -X stuff './viewimage.sh *.png\n'")
+
     return render_template("done.html")
 
 if __name__ == "__main__":

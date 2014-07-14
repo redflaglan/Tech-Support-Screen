@@ -22,6 +22,7 @@ def makeimage(text, point_size=100, width=30):
         if c.isalpha() or c.isdigit() or c in ["-", "_"]
     )
 
+
     os.system(COMMAND.format(point_size, text, filename))
 
 
