@@ -8,5 +8,5 @@ stuff = {"Network cables can be purchased at the canteen": 60,
          "TECH SUPPORT": 150,
          "THIS IS NOT THE GAMES ADMIN DESK": 100}
 for k,v in stuff.items():
-    os.system("./makeimage {} {}".format(v, k))
+    os.system("./makeimage.py {} {}".format(v, k))
     print "Done {} at {}pt".format(k, v)
