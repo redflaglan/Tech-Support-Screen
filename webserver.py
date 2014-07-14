@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, make_response
 import os
 import textwrap
 
+from makeimage import makeimage
 from config import SECRET
 
 app = Flask(__name__)
@@ -19,7 +20,8 @@ def process():
         return "lol"
     if 'text' not in request.args or 'size' not in request.args:
         return "Missing text or font size"
-    os.system("./makeimage.py {} {}".format(request.args['size'], request.args['text']))
+
+    makeimage(request.args['size'], request.args['text'])
     os.system("screen -S tehpix -X stuff './viewimage.sh *.png\n'")
     return render_template("done.html")
 
