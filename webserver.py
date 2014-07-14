@@ -21,7 +21,7 @@ def process():
     if 'text' not in request.args or 'size' not in request.args:
         return "Missing text or font size"
 
-    makeimage(request.args['size'], request.args['text'])
+    makeimage(request.args['text'], request.args['size'])
     os.system("screen -S tehpix -X stuff './viewimage.sh *.png\n'")
     return render_template("done.html")
 
