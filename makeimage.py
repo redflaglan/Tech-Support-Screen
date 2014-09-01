@@ -5,8 +5,8 @@ import textwrap
 
 COMMAND = (
     'convert -size 1920x1080 canvas:"rgb(149, 1, 1)" '
-    '-font Dejavu-Sans-Bold -pointsize {} -gravity center -stroke none '
-    '-fill white -annotate 0 "{}" -size 1920x1080 "{}.png"'
+    '-font Dejavu-Sans-Bold -pointsize {0} -gravity center -stroke none '
+    '-fill white -annotate 0 "{1}" -size 1920x1080 "{2}.png"'
 )
 
 
