@@ -18,4 +18,4 @@ stuff = [
 for text, point in stuff:
     makeimage(text, point)
 
-    print('Done {} at {}pt'.format(text, point))
+    print('Done {0} at {1}pt'.format(text, point))
